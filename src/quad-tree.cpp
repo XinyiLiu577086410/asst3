@@ -16,7 +16,7 @@ void getParticlesImpl(std::vector<Particle> &particles, QuadTreeNode *node,
   Vec2 pivot = (bmin + bmax) * 0.5f;
   Vec2 size = (bmax - bmin) * 0.5f;
   int containingChild =
-      (position.x < pivot.x ? 0 : 1) + ((position.y < pivot.y ? 1 : 0) << 1);
+      (position.x < pivot.x ? 0 : 1) + ((position.y < pivot.y ? 1 : 0) << 1);//这个变量有什么用？
   for (int i = 0; i < 4; i++) {
     Vec2 childBMin;
     childBMin.x = (i & 1) ? pivot.x : bmin.x;
