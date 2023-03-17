@@ -1,4 +1,4 @@
 *.txt
-.vscode
-bmps
-logs
+.vscode/
+bmps/
+logs/
