@@ -1,5 +1,5 @@
 #include "world.h"
-
+#include <iostream>
 class SimpleNBodySimulator : public INBodySimulator {
 public:
   std::vector<Particle> nearbyParticles;
@@ -14,7 +14,7 @@ public:
                             std::vector<Particle> &particles,
                             std::vector<Particle> &newParticles,
                             StepParameters params) override {
-#pragma omp parallel for
+//#pragma omp parallel for
     for (int i = 0; i < (int)particles.size(); i++) {
       auto pi = particles[i];
       Vec2 force = Vec2(0.0f, 0.0f);

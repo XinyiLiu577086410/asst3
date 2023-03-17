@@ -1,0 +1,231 @@
+Correctness Checking EnabledSequential
+bmax: 8.96339 9.00585
+bmin: -8.68085 -7.15046
+bmid: 0.141272 0.927696
+p.position.x = 8.96339  p.position.y = -2.34686
+on x: -8.68085~0.141272
+on y: 0.927696~9.00585
+p.position.x = 2.93964  p.position.y = 3.28745
+on x: -8.68085~0.141272
+on y: 0.927696~9.00585
+p.position.x = -7.89358  p.position.y = 3.12119
+on x: -8.68085~0.141272
+on y: 0.927696~9.00585
+p.position.x = 8.49128  p.position.y = -0.0797043
+on x: -8.68085~0.141272
+on y: 0.927696~9.00585
+p.position.x = 8.43052  p.position.y = 9.00585
+on x: -8.68085~0.141272
+on y: 0.927696~9.00585
+p.position.x = 7.53274  p.position.y = -3.79332
+on x: -8.68085~0.141272
+on y: 0.927696~9.00585
+p.position.x = -4.80597  p.position.y = 3.01019
+on x: -8.68085~0.141272
+on y: 0.927696~9.00585
+end children
+p.position.x = 8.96339  p.position.y = -2.34686
+on x: 0.141272~8.96339
+on y: 0.927696~9.00585
+p.position.x = 2.93964  p.position.y = 3.28745
+on x: 0.141272~8.96339
+on y: 0.927696~9.00585
+p.position.x = -7.51232  p.position.y = -6.37953
+on x: 0.141272~8.96339
+on y: 0.927696~9.00585
+p.position.x = 8.49128  p.position.y = -0.0797043
+on x: 0.141272~8.96339
+on y: 0.927696~9.00585
+p.position.x = 8.43052  p.position.y = 9.00585
+on x: 0.141272~8.96339
+on y: 0.927696~9.00585
+end children
+p.position.x = 8.96339  p.position.y = -2.34686
+on x: -8.68085~0.141272
+on y: -7.15046~0.927696
+p.position.x = -8.68085  p.position.y = -7.15046
+on x: -8.68085~0.141272
+on y: -7.15046~0.927696
+p.position.x = -7.51232  p.position.y = -6.37953
+on x: -8.68085~0.141272
+on y: -7.15046~0.927696
+end children
+p.position.x = 8.96339  p.position.y = -2.34686
+on x: 0.141272~8.96339
+on y: -7.15046~0.927696
+p.position.x = 7.53274  p.position.y = -3.79332
+on x: 0.141272~8.96339
+on y: -7.15046~0.927696
+end children
+size of Subparticles[0]: 2
+!
+size of particle arguement: 2
+size of leaf: 2
+they are: 2&
+6&
+
+
+size of Subparticles[1]: 2
+!
+size of particle arguement: 2
+size of leaf: 2
+they are: 1&
+4&
+
+
+size of Subparticles[2]: 2
+!
+size of particle arguement: 2
+size of leaf: 2
+they are: 7&
+8&
+
+
+size of Subparticles[3]: 2
+!
+size of particle arguement: 2
+size of leaf: 2
+they are: 0&
+5&
+
+
+end sort out
+
+
+
+particle: 2(-7.89358, 3.12119) outside of min: (-8.68085, -7.15046) max: (0.141273, 0.927695)
+Your Tree has Error!
+attractors of particle 0 is:
+0
+force of particle 0 = (0.00224536,-0.0107825)
+Sequential -- Mismatch: found correctness error at index 0, result 8.35982, -0.152655, should be 9.35844, -2.833
+iteration 0, tree construction: 0.000738s, simulation: 0.000022s
+bmax: 8.35982 0
+bmin: 0 -0.152655
+bmid: 4.17991 -0.0763274
+p.position.x = 8.35982  p.position.y = -0.152655
+on x: 0~4.17991
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.0763274~0
+end children
+p.position.x = 8.35982  p.position.y = -0.152655
+on x: 4.17991~8.35982
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 4.17991~8.35982
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 4.17991~8.35982
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 4.17991~8.35982
+on y: -0.0763274~0
+p.position.x = 0  p.position.y = 0
+on x: 4.17991~8.35982
+on y: -0.0763274~0
+end children
+p.position.x = 8.35982  p.position.y = -0.152655
+on x: 0~4.17991
+on y: -0.152655~-0.0763274
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.152655~-0.0763274
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.152655~-0.0763274
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.152655~-0.0763274
+p.position.x = 0  p.position.y = 0
+on x: 0~4.17991
+on y: -0.152655~-0.0763274
+end children
+p.position.x = 8.35982  p.position.y = -0.152655
+on x: 4.17991~8.35982
+on y: -0.152655~-0.0763274
+p.position.x = 0  p.position.y = 0
+on x: 4.17991~8.35982
+on y: -0.152655~-0.0763274
+p.position.x = 0  p.position.y = 0
+on x: 4.17991~8.35982
+on y: -0.152655~-0.0763274
+p.position.x = 0  p.position.y = 0
+on x: 4.17991~8.35982
+on y: -0.152655~-0.0763274
+end children
+size of Subparticles[0]: 4
+!
+size of particle arguement: 4
+size of leaf: 4
+they are: 0&
+0&
+0&
+0&
+
+
+size of Subparticles[1]: 0
+!
+size of particle arguement: 0
+size of leaf: 0
+they are: 
+
+size of Subparticles[2]: 0
+!
+size of particle arguement: 0
+size of leaf: 0
+they are: 
+
+size of Subparticles[3]: 1
+!
+size of particle arguement: 1
+size of leaf: 1
+they are: 3&
+
+
+end sort out
+
+
+
+particle: 0(0, 0) outside of min: (0, -0.152655) max: (4.17991, -0.0763274)
+Your Tree has Error!
+attractors of particle 0 is:
+0
+0
+0
+0
+force of particle 0 = (0,0)
+attractors of particle 1 is:
+0
+0
+0
+0
+force of particle 1 = (0,0)
+attractors of particle 2 is:
+0
+0
+0
+0
+force of particle 2 = (0,0)
+attractors of particle 3 is:
+0
+0
+0
+0
+force of particle 3 = (0,0)
+Sequential -- Mismatch: found correctness error at index 4, result 0, 0, should be 8.46214, 7.67767
+iteration 1, tree construction: 0.000761s, simulation: 0.000164s
+TOTAL TIME: 0.001684s
+total tree construction time: 0.001499s
+total simulation time: 0.000185s
+lxy@hustcpu01:~/asst3$ 
