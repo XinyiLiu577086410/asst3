@@ -1,9 +1,0 @@
-*.txt
-.vscode/
-bmps/
-logs/
-try/
-.gitignore
-nbody-ref
-nbody-release
-reference-init.txt
