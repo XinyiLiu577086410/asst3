@@ -24,14 +24,12 @@ public:
     // particles.
     // BEGIN EDIT
     std::unique_ptr<QuadTreeNode> node(new QuadTreeNode);
-    node->particles.clear();
-    for(int i = 0; i < 4; i++) node->children[i] = nullptr;
-    if(particles.size()<=QuadTreeLeafSize){
+    if(particles.size() <= QuadTreeLeafSize){
       node->isLeaf = true;
       node->particles.swap(particles);
     }
     else{
-      node->isLeaf = false;
+      node->isLeaf = false; 
       std::vector<Particle> Subparticles[4];
       Vec2 bmid = (bmin + bmax) * 0.5f;
       Vec2 borders[4][2] = {
@@ -40,13 +38,13 @@ public:
         {{bmin.x,bmid.y}, {bmid.x,bmax.y}},//2
         {{bmid.x,bmid.y}, {bmax.x,bmax.y}},//3
         };
-      for(int j = 0;j < 4;j++){
+      for(int j = 0; j < 4; j++){
         for(size_t i = 0; i < particles.size();){
           auto p = particles[i];
           if(p.position.x >= borders[j][0].x && p.position.x <= borders[j][1].x
             && p.position.y >= borders[j][0].y && p.position.y <= borders[j][1].y) {
             Subparticles[j].push_back(p);
-            if(particles[i].id != particles.back().id) {
+            if(i < particles.size() - 1) {
               std::swap(particles[i], particles.back());
               particles.pop_back();
               continue;
@@ -54,11 +52,12 @@ public:
             else{
               particles.pop_back();
               continue;
-            }
+            }  
           }
           i++;
         }
       }
+      #pragma omp parallel for
       for(int i = 0; i < 4; i++){
         node->children[i] = buildQuadTree(Subparticles[i], borders[i][0], borders[i][1]);
       }
@@ -106,8 +105,9 @@ public:
                             StepParameters params) override {
     // TODO: implement parallel version of quad-tree accelerated n-body
     // BEGIN EDIT
-    #pragma opm parallel for 
-    for (int i = 0; i < (int)particles.size(); i++) {
+    int particlesSize = particles.size();
+    #pragma omp parallel for schedule(dynamic) shared(newParticles,params,particles,accel)
+    for (int i = 0; i < particlesSize; i++) {
       Vec2 force = Vec2(0.0f,0.0f);
       std::vector<Particle> attractors;
       auto pi = particles[i];
